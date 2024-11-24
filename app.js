@@ -7,7 +7,7 @@ const postRoutes = require("./routes/postRoutes"); // Імпортуємо ма�
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const db = "mongodb+srv://new-user:qwertyuiop@cluster0.rzt0c.mongodb.net/Node-blog";
+const db = process.env.MONGO_URI || 'mongodb+srv://new-user:qwertyuiop@cluster0.rzt0c.mongodb.net/Node-blog';
 
 // Налаштування
 app.set("views", path.join(__dirname, "views"));
